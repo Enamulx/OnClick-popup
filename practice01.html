@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.pop {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="one">On Click</button>
+		<p id="two" class="pop">POPUP</p>
+		<script>
+			let isTrue = true;
+			const one = document.getElementById("one");
+			const two = document.getElementById("two");
+			console.log(one);
+			console.log(two);
+			console.log("isTrue");
+			one.addEventListener("click", () => {
+				if (two.classList.contains("pop")) {
+					two.classList.remove("pop");
+				} else {
+					two.classList.add("pop");
+				}
+			});
+		</script>
+	</body>
+</html>

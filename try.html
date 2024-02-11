@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			button {
+				background-color: green;
+				padding: 10px;
+				color: white;
+				border: none;
+				text-align: center;
+				margin: 0 auto;
+				display: block;
+			}
+
+			.form {
+				margin: 0 auto;
+				display: block;
+				max-width: 500px;
+				margin-top: 30px;
+				color: darkcyan;
+			}
+			.none {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="one">click</button>
+		<!-- <h1 class="none" id="two">popup</h1> -->
+		<form id="two" class="none form" action="">
+			First name:
+			<input type="text" />
+			password:<input type="password" />
+		</form>
+		<script>
+			let isTrue = false;
+			const one = document.getElementById("one");
+			const two = document.getElementById("two");
+			console.log(one);
+			console.log(two);
+
+			console.log("isTrue");
+
+			one.addEventListener("click", () => {
+				if (two.classList.contains("none")) {
+					two.classList.remove("none");
+				} else {
+					two.classList.add("none");
+				}
+			});
+		</script>
+	</body>
+</html>
